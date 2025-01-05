@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.buncake.core.learningActivity
+import com.example.buncake.core.settingScreen
 import com.example.buncake.ui.theme.buttonColor
 
 @Composable
@@ -26,7 +27,8 @@ fun HomeScreen(navHostController: NavHostController) {
     val screenList: MutableState<List<String>> = remember {
         mutableStateOf(
             listOf(
-                "Learning Activity"
+                learningActivity.name,
+                settingScreen.name
             )
         )
     }
@@ -50,8 +52,7 @@ fun HomeScreen(navHostController: NavHostController) {
                 ) {
                     Button(
                         onClick = {
-                            println("test ${learningActivity.name}");
-                            navHostController.navigate(learningActivity.name)
+                           navHostController.navigate(screen)
                         },
                         modifier = Modifier
                             .align(Alignment.Center)
