@@ -1,5 +1,6 @@
 package com.example.buncake.ui.views.LearnActivity
 
+import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -19,19 +20,25 @@ fun LearningActivity(navHostController: NavHostController) {
     firingRobot1.firing()
     firingRobot1.start()
 
-    val fruits = listOf<String>("Banana", "Apple", "Orange");
-    val vegetables = mutableListOf("Carrot", "Potato", "Onion");
-    println("====> Test ${fruits[1]}")
+    val handleOnclick = {
+        val intent = Intent(context, FormActivity::class.java)
+        context.startActivity(intent)
+    }
+
+    val onClick = {
+        val intent = Intent(context, FormActivity::class.java)
+        context.startActivity(intent)
+    }
+
+
     Box(
         modifier = Modifier
             .fillMaxSize()
     ) {
         Button(
             modifier = Modifier.align(Alignment.Center),
-            onClick = {
-                val intent = Intent(context, FormActivity::class.java)
-                context.startActivity(intent)
-            }) {
+            onClick = onClick
+        ) {
             Text("Go to Activity ")
         }
     }

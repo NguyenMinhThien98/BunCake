@@ -3,46 +3,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
-
-
+    android:padding="16dp">
 
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:textSize="16sp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/border_placeholder"
+        android:gravity="center_vertical|start"
         android:hint="Enter Your Name"
-        android:textAppearance="@style/HintTextAppearance"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
-        android:gravity="center_vertical|start"
-        />
+        android:textAppearance="@style/HintTextAppearance"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextAge"
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:textSize="16sp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/border_placeholder"
+        android:gravity="center_vertical|start"
         android:hint="Enter Your Age"
-        android:textAppearance="@style/HintTextAppearance"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
-        android:gravity="center_vertical|start"
-        />
+        android:textAppearance="@style/HintTextAppearance"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonSubmit"
-        android:paddingVertical="8dp"
         android:layout_width="160dp"
         android:layout_height="60dp"
+        android:paddingVertical="8dp"
         android:text="Submit" />
 
 
